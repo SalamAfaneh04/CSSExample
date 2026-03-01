@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Internal -->
+    <style>
+
+    /*  Element Selector */
+p {
+ font-size: 30px;
+}
+
+/* Class Selector  */
+.box {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+/*  ID Selector */
+#main-title {
+  color: darkred;
+}
+
+/* Universal Selector */
+* {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+/*  Group Selector */
+h2, h3 {
+  color: green;
+}
+
+/*  Descendant Selector */
+div p {
+  border: 1px solid black;
+}
+
+/*  Child Selector */
+div > span {
+  color: purple;
+}
+
+/* Adjacent Sibling */
+h1 + p {
+  color: orange;
+}
+
+/*  General Sibling */
+h1 ~ h3 {
+  background-color: yellow;
+   /* border: 2px solid blue; */
+    /* border: 2px dotted blue; */
+    /* border: 2px dashed blue; */
+    border-bottom: 2px solid red;
+  border-radius: 10px;
+  
+}
+
+/*  Attribute Selector */
+input[type="text"] {
+ 
+border: 1px dotted blue;
+}
+
+
+
+    </style>
+</head>
+<body>
+   
+    <!-- Inline  -->
+    <div style="color: chartreuse;">This is div styled with inline method</div>
+    
+
+    <h1 id="main-title">Main Title</h1>
+
+<p>First paragraph after h1 </p>
+
+<P>Second paragraph after h1</P>
+
+
+<h3> h3 sibling</h3>
+
+<div class="box">
+  <h2>Inside Div</h2>
+  <p>Paragraph inside div</p>
+  <span>Direct child span</span>
+  <h5>H5</h5>
+  <span>Second Direct child span</span>
+</div>
+
+<input type="text" placeholder="Text input">
+<br><br>
+<input type="password" placeholder="Password input">
+
+
+
+</body>
+</html>
