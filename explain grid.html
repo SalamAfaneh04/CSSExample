@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Full Example</title>
+
+    <style>
+      /* ====== 1) تفعيل Grid ====== */
+      .container {
+        display: grid; /* يجعل العنصر Grid Container */
+
+        /* ====== 2) تحديد الأعمدة ====== */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* 3 أعمدة متساوية */
+
+        /* ====== 3) تحديد الصفوف ====== */
+        grid-template-rows: 100px 150px 100px;
+
+        /* ====== 4) المسافات بين العناصر ====== */
+        gap: 10px;
+
+        background: #f4f4f4;
+        padding: 10px;
+      }
+
+      /* تصميم عام للعناصر */
+      .item {
+        background: #3498db;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      /* ====== 5) التحكم بالتمدد عبر الأعمدة ====== */
+      .item1 {
+        grid-column: 1 / 4;
+        /* يمتد من العمود 1 إلى 4 (يعني يأخذ 3 أعمدة) */
+        background: #2ecc71;
+      }
+
+      /* ====== 6) التحكم بالتمدد عبر الصفوف ====== */
+      .item2 {
+        grid-row: 2 / 4;
+        /* يمتد من الصف 2 إلى 4 */
+        background: #e74c3c;
+      }
+
+      /* ====== 7) استخدام grid-area ====== */
+      .item5 {
+        grid-column: 2 / 4;
+        background: #9b59b6;
+      }
+
+      /* ====== 8) محاذاة المحتوى داخل الشبكة ====== */
+      .container {
+        justify-content: center; /* محاذاة أفقية */
+        align-content: center; /* محاذاة عمودية */
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">Header (Span 3 columns)</div>
+      <div class="item item2">Sidebar (Span 2 rows)</div>
+      <div class="item">Content 1</div>
+      <div class="item">Content 2</div>
+      <div class="item item5">Footer (Span 2 columns)</div>
+    </div>
+  </body>
+</html>
