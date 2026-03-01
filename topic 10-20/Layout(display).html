@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      /* Block element */
+      .block {
+        display: block;
+        background-color: lightblue;
+        margin: 10px 0;
+      }
+
+      /* Inline element */
+      .inline {
+        display: inline;
+        background-color: yellow;
+        width: 100px; /* Will NOT work */
+        height: 50px; /* Will NOT work */
+      }
+
+      /* Inline-block element */
+      .inline-block {
+        display: inline-block;
+        background-color: orange;
+        width: 100px; /* Works */
+        height: 50px; /* Works */
+
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">Block 1</div>
+    <div class="block">Block 2</div>
+
+    <span class="inline">Inline 1</span>
+    <span class="inline">Inline 2</span>
+
+    <br /><br />
+
+    <span class="inline-block">Box 1</span>
+    <span class="inline-block">Box 2</span>
+  </body>
+</html>

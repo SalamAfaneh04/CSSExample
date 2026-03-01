@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 400px;
+        height: 250px;
+        background-color: lightgray;
+        position: relative; /* Important for absolute */
+        margin-bottom: 50px;
+        padding: 10px;
+      }
+
+      /* 1️⃣ Static (default) */
+      .static-box {
+        background-color: lightblue;
+      }
+
+      /* 2️⃣ Relative */
+      .relative-box {
+        position: relative;
+        top: 20px; /* Moves down 20px */
+        left: 20px; /* Moves right 20px */
+        background-color: orange;
+      }
+
+      /* 3️⃣ Absolute */
+      .absolute-box {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+      }
+
+      /* 4️⃣ Fixed */
+      .fixed-box {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: green;
+        color: white;
+      }
+
+      .box {
+        padding: 10px;
+        margin: 5px;
+      }
+
+      /* Extra content to make page scrollable */
+      .content {
+        height: 1500px;
+        background: linear-gradient(to bottom, #ffffff, #dddddd);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box static-box">Static</div>
+      <div class="box relative-box">Relative</div>
+      <div class="box absolute-box">Absolute</div>
+    </div>
+
+    <div class="box fixed-box">Fixed</div>
+
+    <div class="content">
+      <p>
+        Scroll down to see how Static, Relative, Absolute, and Fixed behave.
+      </p>
+      <p>
+        Keep scrolling… Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla ac erat at sapien cursus venenatis. Integer non velit a ligula
+        posuere malesuada. Donec vel turpis et nulla sollicitudin lacinia.
+      </p>
+      <p>More content for scrolling…</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        tristique, leo ut pulvinar ullamcorper, velit purus fermentum sapien,
+        vitae tincidunt sapien nisi at libero.
+      </p>
+    </div>
+  </body>
+</html>
